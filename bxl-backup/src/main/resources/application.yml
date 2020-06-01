@@ -1,0 +1,26 @@
+server:
+  port: 8002
+spring:
+  application:
+    name: bxl-backup
+  boot:
+    admin:
+      client:
+        url: "http://localhost:8003"
+
+bxl:
+  backup:
+    datasource:
+      host: 192.168.218.123
+      username: root
+      password: 123456
+      database: bxl
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8004/eureka

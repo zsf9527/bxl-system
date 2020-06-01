@@ -1,0 +1,19 @@
+server:
+  port: 8008
+spring:
+  application:
+    name: zuul-server
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8004/eureka
+
+zuul:
+  routes:
+    ribbon:
+      path: /ribbon/**
+      serviceId: bxl-consumer
+    feign:
+      path: /feign/**
+      serviceId: bxl-consumer
+
